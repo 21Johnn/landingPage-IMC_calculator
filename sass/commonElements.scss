@@ -1,0 +1,71 @@
+
+.background{
+    background-image: url(../img/breakfast-ga7712c26a_1920.png);
+
+}
+
+
+header{
+    width: 75vw;
+    margin: auto;
+    height: 100vh;
+    font-weight: bold;
+    font-size: 15px;
+    color: $textcolor-smooth;
+ 
+    #navItem{
+     &:hover{
+         color: $colorHover;
+     }}
+    
+ }
+ 
+ .menu--itens{
+         text-decoration: none;
+         color: $textcolor-smooth;
+         font-family: 'Roboto', sans-serif;
+         font-weight: 900;
+     }
+
+
+footer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 35px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    height: 10vh;
+    margin: 100px auto 0 auto;
+    background-color:$colorMarron;
+
+    .social{
+        display: flex;
+        gap: 15px;
+
+        img{
+            width: 35px;
+        }
+    }
+}
+
+// wpp button
+
+.float{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:40px;
+	right:40px;
+	background-color:#25d366;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+  font-size:30px;
+	box-shadow: 2px 2px 3px #999;
+  z-index:100;
+}
+
+.my-float{
+	margin-top:16px;
+}

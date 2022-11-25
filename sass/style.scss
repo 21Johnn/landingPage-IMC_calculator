@@ -1,0 +1,339 @@
+/*colors*/
+@import "./variables.scss";
+
+// common elements
+@import "./commonElements.scss";
+
+// imc
+@import "./pages/imc.scss";
+
+// form
+@import "./pages/form.scss";
+
+
+// fonts
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;1,100;1,200;1,900&family=Oswald:wght@400;500&family=Roboto:ital,wght@0,300;0,400;1,100;1,300&display=swap');
+
+
+
+header{
+   width: 75vw;
+   margin: auto;
+   height: 100vh;
+   font-weight: bold;
+   font-size: 15px;
+   color: $textcolor-smooth;
+
+   #navItem{
+    &:hover{
+        color: $colorHover;
+    }}
+   
+}
+
+.menu--itens{
+        text-decoration: none;
+        color: $textcolor-smooth;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 900;
+    }
+
+
+.header--content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: $textcolor-smooth;
+}
+
+.header--title{
+    margin-top: 30vh;
+}
+
+/*section about*/
+
+.about{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 35px;
+    width: 75vw;
+    height: 60vh;
+    margin-top: 50px;
+    margin: auto;
+    padding: 50px 50px;
+
+
+    img{
+        border-radius: 50%;
+        width: 280px;
+    }
+
+    h1{
+        color: $colorMarron;
+        font-size: 1.5rem;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 600;
+    }
+
+    p{
+        color: $colorGreen;
+        font-size: 1rem;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+    }
+
+}
+
+
+// ebook
+
+.ebook{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 35px;
+    width: 75vw;
+    margin: auto;
+    padding-bottom: 50px;
+    padding-top: 50px;
+
+    p{
+        color: $colorGreen;
+    }
+}
+
+.cards--ebook{
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+/* From uiverse.io by @barisdogansutcu */
+.download-button {
+    position: relative;
+    border-width: 0;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 4px;
+    z-index: 1;
+   }
+   
+   .download-button .docs {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    min-height: 40px;
+    padding: 0 10px;
+    border-radius: 4px;
+    z-index: 1;
+    background-color: #242a35;
+    border: solid 1px #e8e8e82d;
+    transition: all .5s cubic-bezier(0.77, 0, 0.175, 1);
+   }
+   
+   .download-button:hover {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+   }
+   
+   .download {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 90%;
+    margin: 0 auto;
+    z-index: -1;
+    border-radius: 4px;
+    transform: translateY(0%);
+    background-color: #01e056;
+    border: solid 1px #01e0572d;
+    transition: all .5s cubic-bezier(0.77, 0, 0.175, 1);
+   }
+   
+   .download-button:hover .download {
+    transform: translateY(100%)
+   }
+   
+   .download svg polyline,.download svg line {
+    animation: docs 1s infinite;
+   }
+   
+   @keyframes docs {
+    0% {
+     transform: translateY(0%);
+    }
+   
+    50% {
+     transform: translateY(-15%);
+    }
+   
+    100% {
+     transform: translateY(0%);
+    }
+   }
+
+/*faq*/
+
+.FAQ{
+    padding-top: 20px;
+    width: 75vw;
+    height: 40vh;
+    margin: auto;
+}
+
+
+// contato
+
+
+.contact{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 35px;
+    padding-top: 20px;
+    width: 75vw;
+    height: 60vh;
+    margin: 200px auto;
+
+}
+
+.contact--img{
+    img{
+        width: 250px;
+    }
+}
+
+.form--contact{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    
+    
+
+    form{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        input{
+            border: none;
+            border-bottom: 1px solid $colorGreen;
+            background: transparent;            
+        }
+
+        input:focus {
+            outline: none;
+           }
+
+        textarea{
+            max-height: 80px;
+           resize: none;
+        }
+    }
+}
+
+
+@media (max-width: 927px){
+
+    .about{        
+        width: 90vw;
+    }
+
+    .header--content{
+        text-align: center;
+    }
+}
+
+@media (max-width: 700px){
+
+    .about{        
+        flex-direction: column;
+        margin-bottom: 15vh;
+        text-align: center;
+
+        img{
+            width: 140px;
+        }
+    }
+
+    .cards--ebook{
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .contact{
+        justify-content: start;
+        width: 100vw;
+
+    }
+
+    .contact--img{
+        img{
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 425px){
+
+    header{
+        height: 85vh;
+    }
+
+    .header--content{
+        justify-content:start
+    }
+
+    .header--title{
+        margin-top: 10vh;
+    }
+
+    .about{
+        width: 97vw;
+
+        h1{
+            font-size: 1em;
+        }
+        
+        p{
+            font-size: .8em;
+        }
+    }
+
+    .FAQ{
+        width: 97vw;
+        font-size: 12px;
+    }
+
+    .contact{
+        margin: 120px auto;
+    }
+        
+        
+    
+    form{            
+        gap: 7px;
+    
+        input{                
+            height: 15px;                         
+        }    
+    
+        textarea{
+            max-height: 60px;
+        }
+    }
+
+    .social{
+        img{
+            display: none;
+        }
+    }
+    
+}
+

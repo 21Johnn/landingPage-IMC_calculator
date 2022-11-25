@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcule seu IMC</title>
+
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+
+    <!-- css -->
+    <link rel="stylesheet" href="../css/style.css" />
+
+
+</head>
+
+<body>
+    <div class="background screen">
+
+        <div class="header">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">
+                        <img src="../img/nutricao.png" alt="logo" width="50">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse text-white" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item ">
+                                <a class="nav-link active" aria-current="page" href="../index.html" id="navItem">HOME</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#" id="navItem">CALCULE SEU IMC</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="https://forms.gle/PkhYxgXhH52B34Da8" id="navItem">PRÉ-CONSULTA</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <div class="container">
+            <div class="form">
+                <form action="">
+                    
+                    <div class="form__group field">
+                        <input required="" placeholder="Altura cm" class="form__field" type="input" id="height" required>
+                        <label class="form__label" for="name">ALTURA cm</label>
+                    </div>
+                    <div class="form__group field">
+                        <input required="" placeholder="Peso kg" class="form__field" type="input" id="weight" required>
+                        <label class="form__label" for="name">PESO kg</label>
+                    </div>
+                    <input type="submit" value="CALCULAR" class="submit" id="event" onclick="imc(event)">
+                </form>
+
+                <div class="state state--active">
+                    <div class="top">
+                        <div class="mobile1">
+                            <div class="under17" id="under17">
+                                <p class="h6">Abaixo de 17</p>
+                                <span>Muito abaixo do peso</span>
+                            </div>
+                            <div class="under18" id="under18">
+                                <p class="h6">Entre 17 e 18.49</p>
+                                <span>Abaixo do peso</span>
+                            </div>
+                        </div>
+                        <div class="mobile2">
+                            <div class="under25" id="under25">
+                                <p class="h6">Entre 18.5 e 24.99</p>
+                                <span>Peso Normal</span>
+                            </div>
+                            <div class="under30" id="under30">
+                                <p class="h6">Entre 25 e 29.99</p>
+                                <span>Acima do peso</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bottom">
+                        <div class="under35" id="under35">
+                            <p class="h6">Entre 30 e 34.99</p>
+                            <span>Obesidade I</span>
+                        </div>
+                        <div class="under40" id="under40">
+                            <p class="h6">Entre 35 e 39.99</p>
+                            <span>Obesidade II (Severa)</span>
+                        </div>
+                        <div class="above40" id="above40">
+                            <p class="h6">Acima de 40</p>
+                            <span>Obesidade III (mórbida)</span>
+                        </div>
+                    </div>
+
+                    <!-- resultado -->
+
+                    <div class="resultado-hidden" id="hidden-result">
+                        <h2>AQUI ESTÁ SEU RESULTADO</h2>
+                        <p class="personalizado" id="result"></p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>  
+
+    <div class="error--alert hidden--elements " id="error--alert">
+        <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+          <symbol
+            id="exclamation-triangle-fill"
+            fill="currentColor"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"
+            />
+          </symbol>
+        </svg>
+        <div class="alert alert-danger d-flex align-items-center" role="alert">
+          <svg
+            class="bi flex-shrink-0 me-2"
+            width="24"
+            height="24"
+            role="img"
+            aria-label="Danger:"
+          >
+            <use xlink:href="#exclamation-triangle-fill" />
+          </svg>
+          <div>VOCÊ DEVE PREENCHER TODOS OS CAMPOS</div>
+        </div>
+      </div>
+
+    <!-- script -->
+    <script src="./imc.js"></script>
+
+</body>
+
+</html>
